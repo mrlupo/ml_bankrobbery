@@ -2,7 +2,7 @@
 Mrlupo & Dexi21
 
 
-# ml_bankrobbery
+# ml_bankrobbery for redem
 
 Add ml_bankrobbery to your [redemrp] folder
 
