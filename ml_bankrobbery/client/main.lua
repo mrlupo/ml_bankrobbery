@@ -1,20 +1,23 @@
 StartRobbing = {}
+local = robbing
 
 RegisterNetEvent('StartRobbing')
 AddEventHandler('StartRobbing', function()	
     local ped = PlayerPedId()
     local coords = GetEntityCoords(ped)
-
+		if robbing == false then
 			
             TaskStartScenarioInPlace(PlayerPedId(), GetHashKey('WORLD_HUMAN_CROUCH_INSPECT'), -1, true, false, false, false)
+			robbing = true
            TriggerEvent("redemrp_notification:start", "You have started to rob this bank!", 5)
             Citizen.Wait(35000)
             ClearPedTasksImmediately(PlayerPedId())
 			ClearPedSecondaryTask(PlayerPedId())
+			robbing = false
 
                 TriggerServerEvent("mlpayout") -- add gold/money
 
-		
+		end
 end)
 
 
