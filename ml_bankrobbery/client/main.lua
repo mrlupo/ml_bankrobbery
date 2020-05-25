@@ -1,5 +1,5 @@
 StartRobbing = {}
-local = robbing
+local robbing = false
 
 RegisterNetEvent('StartRobbing')
 AddEventHandler('StartRobbing', function()	
